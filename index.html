@@ -21,12 +21,12 @@
     }
     
     div#sidebar {
-      flex: 0 1;
-      position: relative;
-      flex-basis: calc(var(--sidebarWidth) + var(--handleWidth));
-      box-shadow: 0 0 20px rgb(34 36 38 / 70%);
-      display: flex;
-      flex-direction: row;
+      	flex: 0 1;
+      	position: relative;
+      	flex-basis: calc(var(--sidebarWidth) + var(--handleWidth));
+      	box-shadow: 0 0 20px rgb(34 36 38 / 70%);
+      	display: flex;
+      	flex-direction: row;
     }
     
     div#sidebar:not(.resizing) {
@@ -80,36 +80,36 @@
 
 <body>
 
-    <div id="mainBody">
-        <div id="sidebar" class="visible">
-            <div id="sidebarContent">
+	<div id="mainBody">
+		<div id="sidebar" class="visible">
+			<div id="sidebarContent">
 				<ul>
-                	<li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
-            </div>
-            <div id="sidebarHandle"></div>
-        </div>
-        <div id="mainContent">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+			<div id="sidebarHandle"></div>
+		</div>
+		<div id="mainContent">
 			<button onclick="hideSidebar()">Hide/Unhide Sidebar</button>
-            <button onclick="handleDoubleClick()">Close/Open Sidebar</button>
-            <p>
-              Hiding the sidebar hides the handle as well, making it completely inaccessable. 
-              Closing the sidebar only closes the content of the sidebar. You can drag the handle 
-              to anywhere you like, and you can double click it to open and close it. The css 
-              transition does not rely on max-width and thus will not have any delay or timing 
-              issues due to setting a max width larger than what would ever be needed.
-            </p>
-        </div>
-    </div>
+			<button onclick="handleDoubleClick()">Close/Open Sidebar</button>
+			<p>
+				Hiding the sidebar hides the handle as well, making it completely inaccessable. 
+				Closing the sidebar only closes the content of the sidebar. You can drag the handle 
+				to anywhere you like, and you can double click it to open and close it. The css 
+				transition does not rely on max-width and thus will not have any delay or timing 
+				issues due to setting a max width larger than what would ever be needed.
+			</p>
+		</div>
+	</div>
   
   	<script>
     	const handleWidth = 30;    
         const sidebarWidth = 350;  
         document.querySelector('div#mainBody').style = `
-        	--handleWidth: ${handleWidth}px;
-            --sidebarWidth: ${sidebarWidth}px;
+			--handleWidth: ${handleWidth}px;
+			--sidebarWidth: ${sidebarWidth}px;
 		`;
         
         const sidebarHandle = document.querySelector('div#sidebarHandle');
